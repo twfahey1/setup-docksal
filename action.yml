@@ -1,0 +1,5 @@
+name: 'Setup Docksal'
+description: 'Installs and configure Docksal.'
+runs:
+  using: 'node12'
+  main: 'index.js'
