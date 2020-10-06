@@ -1,5 +1,7 @@
 #!/bin/sh
+export DOCKSAL_VERSION="${DOCKSAL_VERSION:-master}"
 
-curl -fsSL https://get.docksal.io > install.sh
-chmod +x install.sh
-./install.sh
+sudo mkdir -p /usr/local/bin &&
+	sudo curl -fsSL "https://raw.githubusercontent.com/docksal/docksal/${DOCKSAL_VERSION}/bin/fin?r=${RANDOM}" -o /usr/local/bin/fin &&
+	sudo chmod +x /usr/local/bin/fin &&
+	fin update

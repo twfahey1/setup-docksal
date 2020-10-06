@@ -1,8 +1,9 @@
 # Container image that runs your code
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 # Install prerequisites
 RUN apt-get update && apt-get install -y \
+apt-utils \
 curl \
 sudo \
 iproute2
