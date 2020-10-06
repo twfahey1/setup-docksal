@@ -10,7 +10,7 @@ const exec = require( '@actions/exec' );
 
 async function run() {
 	try {
-		await exec.exec( 'bash <(curl -fsSL https://get.docksal.io)' );
+		await exec.exec( 'curl -fsSL https://get.docksal.io > install.sh > install.sh && chmod +x install.sh && ./install.sh' );
 	} catch ( error ) {
 		core.setFailed( error.message );
 	}
